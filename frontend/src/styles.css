@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+@font-face{
+    font-family: 'BOOKOS';
+    src:url(/assets/fonts/BOOKOS.TTF) format("truetype");
+}
+
+body{
+    font-family:'BOOKOS';
+    padding-top:56px;
+}
+
+ 
