@@ -8,7 +8,8 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 
-
+// we can replace bolow code with config.getRepository()..
+//@CrossOrigin("http://localhost:4200")
 @CrossOrigin("http://localhost:4200")
 public interface BookRepository extends JpaRepository<Book,Long> {
     @RestResource(path="categoryid")

@@ -22,5 +22,10 @@ public class RepositoryConfig implements RepositoryRestConfigurer {
                 .stream()
                 .map(Type::getJavaType)
                 .toArray(Class[]::new));
+/*        we can use this methos to autometically allow origin
+        instead of writing CrossOrigin everytime in repositories.*/
+        config.getCorsRegistry()
+                .addMapping("/**")
+                .allowedOrigins("http://localhost:4200");
     }
 }
