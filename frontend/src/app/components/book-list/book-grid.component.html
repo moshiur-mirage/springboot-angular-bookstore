@@ -26,6 +26,10 @@
             </div>
           </div>
         </div>
+        <!-- below question check only if the books is not null or undefined  -->
+        <div *ngIf="books?.length==0" class="col-md-12 alert alert-warning mt-3">
+          No Books Found
+        </div>
   </div>
 
     
