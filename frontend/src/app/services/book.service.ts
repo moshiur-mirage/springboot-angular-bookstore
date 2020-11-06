@@ -28,12 +28,16 @@ export class BookService {
     const searchUrl = `${this.baseUrl}/search/searchby?name=${keyword}`;
     return this.getBookList(searchUrl);
   }
-  
 
   private getBookList(searchUrl: string): Observable<Book[]> {
     return this.httpClient
       .get<GetResponseBooks>(searchUrl)
       .pipe(map((response) => response._embedded.books));
+  }
+
+  get(bookId: number): Observable<Book> {
+    const bookDetailsUrl = `${this.baseUrl}/${bookId}`;
+    return this.httpClient.get<Book>(bookDetailsUrl);
   }
 }
 
