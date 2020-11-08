@@ -12,6 +12,9 @@ import { SearchComponent } from './components/search/search.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { JwPaginationComponent } from 'jw-angular-pagination';
+import { CartStatusComponent } from './components/cart-status/cart-status.component';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import { JwPaginationComponent } from 'jw-angular-pagination';
     BookCategoryComponent,
     SearchComponent,
     BookDetailsComponent,
+    CartStatusComponent,
+    CartDetailsComponent,
+    LoginComponent,
     
   ],
   imports: [

@@ -23,10 +23,10 @@ export class BookService {
       .get<GetResponseBookCategory>(this.categoryUrl)
       .pipe(map((response) => response._embedded.bookCategory));
   }
-
-  searchBooks(keyword: string): Observable<Book[]> {
-    const searchUrl = `${this.baseUrl}/search/searchby?name=${keyword}`;
-    return this.getBookList(searchUrl);
+//even search will return pageSize item
+  searchBooks(keyword: string,currentPage:number, pageSize:number): Observable<GetResponseBooks> {
+    const searchUrl = `${this.baseUrl}/search/searchby?name=${keyword}&page=${currentPage}&size=${pageSize}`;
+    return this.httpClient.get<GetResponseBooks>(searchUrl);
   }
 
   private getBookList(searchUrl: string): Observable<Book[]> {
