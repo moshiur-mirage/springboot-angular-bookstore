@@ -10,6 +10,9 @@ import { RouterModule } from '@angular/router';
 import { BookCategoryComponent } from './components/book-category/book-category.component';
 import { SearchComponent } from './components/search/search.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { JwPaginationComponent } from 'jw-angular-pagination';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
     PageNotFoundComponent,
     BookCategoryComponent,
     SearchComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    NgbModule
+    // JwPaginationComponent
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
